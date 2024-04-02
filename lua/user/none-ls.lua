@@ -2,7 +2,8 @@ local M = {
   "nvimtools/none-ls.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
-  },
+    "nvimtools/none-ls-extras.nvim",
+  }
 }
 
 function M.config()
@@ -16,13 +17,15 @@ function M.config()
     sources = {
       formatting.stylua,
       formatting.prettier,
-      formatting.black,
+      require("none-ls.formatting.ruff_format"),
+      -- formatting.black,
       -- formatting.prettier.with {
       --   extra_filetypes = { "toml" },
       --   -- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
       -- },
       -- formatting.eslint,
-      null_ls.builtins.diagnostics.flake8,
+      -- null_ls.builtins.diagnostics.flake8,
+      -- require("none-ls.diagnostics.flake8"),
       -- diagnostics.flake8,
       null_ls.builtins.completion.spell,
     },
