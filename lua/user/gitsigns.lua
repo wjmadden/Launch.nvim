@@ -24,7 +24,6 @@ M.config = function()
 
       -- Pretty sure these are defined in the theme.
       add = {
-        -- current_line_blame_formatter
         -- hl = "GitSignsAdd",
         text = icons.ui.BoldLineMiddle,
         -- numhl = "GitSignsAddNr",
