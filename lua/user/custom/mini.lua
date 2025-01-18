@@ -36,6 +36,8 @@ function M.config()
   -- y yank selection replacing latest put region
   require("mini.bracketed").setup()
 
+  require("mini.icons").setup()
+
   -- ... and there is more!
   --  Check out: https://github.com/echasnovski/mini.nvim
 end
